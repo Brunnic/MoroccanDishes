@@ -15,7 +15,7 @@ const Menu = ({ dish, left }) => (
                 gap: 2,
             }}
         >
-            {window.innerWidth < 882 ? (
+            {typeof window !== "undefined" && window.innerWidth < 882 ? (
                 <>
                     <Box
                         component="img"
