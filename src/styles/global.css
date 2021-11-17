@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+.divider {
+    display: flex;
+}
+.divider:before,
+.divider:after {
+    content: "";
+    flex: 1;
+}
+.line {
+    align-items: center;
+    margin: 1em -1em;
+}
+.line:before,
+.line:after {
+    height: 1px;
+    margin: 0 1em;
+}
+.one-line:before,
+.one-line:after {
+    background: black;
+}
+.razor:before,
+.razor:after {
+    box-shadow: 0 0.5px 0 black;
+}
+.double-razor:before,
+.double-razor:after {
+    height: 3px;
+    box-shadow: 0 -0.5px 0 black, 0 0.5px 0 black;
+    border-width: 0;
+}
+
+.divider2 {
+    position: relative;
+    margin-top: 90px;
+    height: 1px;
+}
+
+.div-transparent:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 1px;
+    background-image: linear-gradient(
+        to right,
+        transparent,
+        rgb(48, 49, 51),
+        transparent
+    );
+}
+
+.div-arrow-down:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -7px;
+    left: calc(50% - 7px);
+    width: 14px;
+    height: 14px;
+    transform: rotate(45deg);
+    background-color: white;
+    border-bottom: 1px solid rgb(48, 49, 51);
+    border-right: 1px solid rgb(48, 49, 51);
+}
+
+.div-tab-down:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 14px;
+    background-color: white;
+    border-bottom: 1px solid rgb(48, 49, 51);
+    border-left: 1px solid rgb(48, 49, 51);
+    border-right: 1px solid rgb(48, 49, 51);
+    border-radius: 0 0 8px 8px;
+}
+
+.div-stopper:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -6px;
+    left: calc(50% - 7px);
+    width: 14px;
+    height: 12px;
+    background-color: white;
+    border-left: 1px solid rgb(48, 49, 51);
+    border-right: 1px solid rgb(48, 49, 51);
+}
+
+.div-dot:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -9px;
+    left: calc(50% - 9px);
+    width: 18px;
+    height: 18px;
+    background-color: goldenrod;
+    border: 1px solid rgb(48, 49, 51);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px white, 0 0 0 4px white;
+}
